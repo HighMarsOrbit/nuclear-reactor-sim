@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl8nlmrc2oh4u"]
+
+[ext_resource type="Script" uid="uid://bucgvb2u8lo6j" path="res://main.gd" id="1_uu6xs"]
+[ext_resource type="PackedScene" uid="uid://cfxfhdvn54f3v" path="res://Atom.tscn" id="2_r0du0"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_uu6xs")
+atom_scene = ExtResource("2_r0du0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+script = ExtResource("1_uu6xs")
