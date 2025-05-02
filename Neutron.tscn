@@ -15,10 +15,10 @@ mass = 0.001
 physics_material_override = SubResource("PhysicsMaterial_pdlc7")
 gravity_scale = 0.0
 script = ExtResource("1_gip0e")
-radius = 4
+radius = 2
+outer_radius_thickness = 0.5
 inner_color = Color(0.82, 0.82, 0.82, 1)
 outer_color = Color(0.1, 0.1, 0.1, 1)
-outer_radius_thickness = 3
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 process_mode = 3

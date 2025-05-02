@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cofv4ori470bq" path="res://atom.gd" id="1_5pyj8"]
 [ext_resource type="PackedScene" uid="uid://cldc3eq1jf3wx" path="res://Neutron.tscn" id="2_tv70j"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_tv70j"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_5pyj8"]
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_5pyj8")
@@ -17,5 +17,5 @@ water_color_cold = Color(0.1701, 0.351405, 0.81, 0.607843)
 water_color_hot = Color(0.819934, 0.0528521, 0.10386, 0.607843)
 water_box_width = 18.0
 
-[node name="AtomCollision" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_tv70j")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5pyj8")
