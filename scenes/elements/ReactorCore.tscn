@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgaemrlpjbi7q"]
+
+[ext_resource type="PackedScene" uid="uid://dua48pjgkqdbb" path="res://scenes/elements/BaseElement.tscn" id="1_md2lq"]
+[ext_resource type="Texture2D" uid="uid://dk1a6yfqco5u7" path="res://assets/reactor_core.png" id="2_las5q"]
+
+[node name="ReactorCore" type="Node2D"]
+
+[node name="BaseElement" parent="." instance=ExtResource("1_md2lq")]
+texture = ExtResource("2_las5q")

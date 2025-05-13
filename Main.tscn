@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://don24ojle7pd6"]
+
+[ext_resource type="PackedScene" uid="uid://yin21br8gl7v" path="res://scenes/menus/ElementMenu.tscn" id="1_glv2v"]
+
+[sub_resource type="GDScript" id="GDScript_rxg2q"]
+script/source = "extends Node2D
+
+@export
+var base_element_scene: PackedScene
+@export
+var grid_size = Vector2(32, 32) # Adjust as needed
+@export
+var grid_color = Color(0, 0, 0)
+
+
+func _ready() -> void:
+	var base_scene = base_element_scene.instantiate()
+	add_child(base_scene)
+
+func _draw():
+	for x in range(0, get_viewport_rect().size.x, grid_size.x):
+		draw_line(Vector2(x, 0), Vector2(x, get_viewport_rect().size.y), grid_color) 
+
+	for y in range(0, get_viewport_rect().size.y, grid_size.y):
+		draw_line(Vector2(0, y), Vector2(get_viewport_rect().size.x, y), grid_color) 
+"
+
+[node name="Node2D" type="Node2D"]
+script = SubResource("GDScript_rxg2q")
+base_element_scene = ExtResource("1_glv2v")
+grid_size = Vector2(16, 16)
+grid_color = Color(0.791999, 0.791999, 0.791999, 1)
